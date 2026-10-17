@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary: #ffffff;
+  --color-text: #000000;
+  --color-secondary:#F3F4F6;
+
+  --dark-color-primary:#1E293B;
+  --dark-color-secondary: #0f172a;
+  --dark-color-text: #ffffff;
+}
+
+.disable-theme-transition *,
+.disable-theme-transition {
+  transition: none !important;
+}
+
+html {
+   font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-family: Poppins, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: Poppins, sans-serif;
+}
+
+.dark body {
+  background-color: var(--dark-color-primary);
+  color: var(--dark-color-text);
+}
+
+.card-shadow {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.dark .card-shadow {
+  border: 1px solid rgba(255, 255, 255, 0.1);   /* Light soft border */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05); /* Soft glow shadow */
+}
+
+/* Custom Utility Classes */
+.bg-primary { background-color: var(--color-primary); }
+.text-primary { color: var(--color-text); }
+.bg-secondary { background-color: var(--color-secondary); }
+
+.dark .bg-primary { background-color: var(--dark-color-primary); }
+.dark .text-primary { color: var(--dark-color-text); }
+.dark .bg-secondary { background-color: var(--dark-color-secondary); }
+
+
+/* Hide scrollbar but allow scrolling */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
+/* Custom Table Border Visibility */
+.custom-visible-table .ant-table {
+  border: 1px solid #bfbfbf !important; /* Darker outside border */
+}
+
+.custom-visible-table .ant-table-thead > tr > th {
+  background-color: #f0f2f5 !important; /* light gray header background */
+  border-bottom: 2px solid #bfbfbf !important; /* Thicker header bottom line */
+  border-inline-end: 1px solid #bfbfbf !important; /* Vertical lines in header */
+}
+
+.custom-visible-table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #bfbfbf !important; /* Horizontal lines */
+  border-inline-end: 1px solid #bfbfbf !important; /* Vertical lines */
+}
+
+/* Remove last vertical line to keep it clean */
+.custom-visible-table .ant-table-thead > tr > th:last-child,
+.custom-visible-table .ant-table-tbody > tr > td:last-child {
+  border-inline-end: none !important;
+}
+
+/* Keep legacy screen utility colors consistent in dark mode. */
+.dark .bg-white,
+.dark .bg-gray-50,
+.dark .bg-slate-50,
+.dark .bg-amber-50 {
+  background-color: #1e293b !important;
+}
+
+.dark .bg-gray-100,
+.dark .bg-slate-100 {
+  background-color: #334155 !important;
+}
+
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark .text-gray-600 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500,
+.dark .text-gray-500 {
+  color: #cbd5e1 !important;
+}
+
+.dark .border-gray-100,
+.dark .border-gray-200,
+.dark .border-slate-200 {
+  border-color: #475569 !important;
+}
+
+.dark .ant-card,
+.dark .ant-modal-content,
+.dark .ant-dropdown-menu {
+  color: #f8fafc;
+}

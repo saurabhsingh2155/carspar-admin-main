@@ -17,7 +17,7 @@ export default function AboutAppPage() {
     try {
       const res = await api.get(API_INFO, {
         params: { type: "aboutApp" },
-      });
+    });
 
       setPolicy(res.data?.data?.content || "");
       setPolicyId(res.data?.data?._id || null);
